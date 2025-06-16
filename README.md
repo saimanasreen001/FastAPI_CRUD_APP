@@ -1,4 +1,4 @@
-## Exercise 2: Dockerized FastAPI CRUD APP
+## Exercise 2: FastAPI CRUD APP
 This is a simple **FastAPI-based CRUD (Create, Read, Update, Delete)** application built using **Python**
 and a **virtual environment**. It allows you to manage a collection of student records via RESTful API endpoints.
 
@@ -61,11 +61,10 @@ FastAPI_CRUD_APP/<br>
    Open http://127.0.0.1:8000/docs for the Swagger UI.
    
 ## Dockerized Deployment
-
- 1.**Setup**
+ 1. **Setup**
  
-   Install Docker Desktop and sign up.<br>
-   Use the same username and password to sign in into hub.docker.com
+     Install Docker Desktop and sign up.<br>
+     Use the same username and password to sign in into hub.docker.com
 
 2. **Docker Image**
    
@@ -103,7 +102,8 @@ FastAPI_CRUD_APP/<br>
    # Command to run the app with uvicorn
    CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
    ```
-   5. **API Documentation**
+   
+   **API Documentation**
    
    Once running (locally or via Docker), access the auto-generated Swagger UI:<br>
    http://localhost:8000/docs
