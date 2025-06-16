@@ -15,20 +15,24 @@ and a **virtual environment**. It allows you to manage a collection of student r
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Uvicorn](https://www.uvicorn.org/) (ASGI server)
 - [Pydantic](https://docs.pydantic.dev/) (data validation)
+- Docker (for containerization)
 
 ## 📁 Project Structure:
 
-|--FastAPI_CRUD_APP/<br>
-  ├── main.py<br>
-  ├── requirements.txt<br>
-  ├── venv/<br>
-  └── README.md<br>
+FastAPI_CRUD_APP/
+ ├── __pycache__/           # Compiled Python files (auto-generated)
+ ├── .dockerignore          # Specifies what to ignore during Docker build
+ ├── Dockerfile             # Instructions to build the Docker image
+ ├── main.py                # Main application file with FastAPI code
+ ├── requirements.txt       # Python dependencies
+├── README.md
 
-## 🛠️ Setup Instructions:
+## 🛠️ Setup Instructions(Without Docker):
 1. **Clone the repository**  
    ```bash
    git clone https://github.com/saimanasreen001/FastAPI_CRUD_APP.git
    cd FastAPI_CRUD_APP
+   ```
 
 2. **Create a virtual environment**
    ```bash
@@ -53,11 +57,48 @@ and a **virtual environment**. It allows you to manage a collection of student r
     ```bash
     uvicorn main:app --reload
     ```
-7. **Test the API**
-   ```bash
+7. **Test the API**<br>
    Open http://127.0.0.1:8000/docs for the Swagger UI.
+   
+## Dockerized Deployment
+
+1. **Docker Image**
+   
+   This app is already dockerized and available on Docker Hub:<br>
+   https://hub.docker.com/r/saimanasreen/fastapi-crud-app
+   
+
+2. **Pull the Docker image**
+   On any host machine with Docker installed:
+   ```bash
+   docker pull saimanasreen/fastapi-crud-app
    ```
 
+3. **Run the Docker Container**
+   ```bash
+   docker run -d -p 8000:8000 saimanasreen/fastapi-crud-app
+   ```
+   The app will be accessible at http://localhost:8000/docs
+
+   **Dockerfile Used**
+   ```bash
+   # Use an official Python base image
+    FROM python:3.11-slim
+
+   # Set the working directory
+   WORKDIR /app
+
+   # Copy requirements and install them
+   COPY requirements.txt .
+   RUN pip install --no-cache-dir -r requirements.txt
+
+   # Copy the rest of the app
+   COPY main.py .
+  
+   # Command to run the app with uvicorn
+   CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+  ```
+   
 
 
 
