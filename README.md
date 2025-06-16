@@ -19,12 +19,12 @@ and a **virtual environment**. It allows you to manage a collection of student r
 
 ## 📁 Project Structure:
 
-FastAPI_CRUD_APP/
- ├── __pycache__/           # Compiled Python files (auto-generated)
- ├── .dockerignore          # Specifies what to ignore during Docker build
- ├── Dockerfile             # Instructions to build the Docker image
- ├── main.py                # Main application file with FastAPI code
- ├── requirements.txt       # Python dependencies
+FastAPI_CRUD_APP/<br>
+ ├── __pycache__/          <br>
+ ├── .dockerignore          <br>
+ ├── Dockerfile            <br>
+ ├── main.py                <br>
+ ├── requirements.txt      <br>
 ├── README.md
 
 ## 🛠️ Setup Instructions(Without Docker):
@@ -62,19 +62,24 @@ FastAPI_CRUD_APP/
    
 ## Dockerized Deployment
 
-1. **Docker Image**
+ 1.**Setup**
+ 
+   Install Docker Desktop and sign up.<br>
+   Use the same username and password to sign in into hub.docker.com
+
+2. **Docker Image**
    
    This app is already dockerized and available on Docker Hub:<br>
    https://hub.docker.com/r/saimanasreen/fastapi-crud-app
    
 
-2. **Pull the Docker image**
+3. **Pull the Docker image**
    On any host machine with Docker installed:
    ```bash
    docker pull saimanasreen/fastapi-crud-app
    ```
 
-3. **Run the Docker Container**
+4. **Run the Docker Container**
    ```bash
    docker run -d -p 8000:8000 saimanasreen/fastapi-crud-app
    ```
@@ -97,7 +102,13 @@ FastAPI_CRUD_APP/
   
    # Command to run the app with uvicorn
    CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
-  ```
+   ```
+   5. **API Documentation**
+   
+   Once running (locally or via Docker), access the auto-generated Swagger UI:<br>
+   http://localhost:8000/docs
+   
+  
    
 
 
