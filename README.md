@@ -81,7 +81,7 @@ FastAPI_CRUD_APP/<br>
 
 5. **Run the Docker Container**
    ```bash
-   docker run -d -p 8000:8000 saimanasreen/fastapi-crud-app
+   docker run -p 8000:8000 saimanasreen/fastapi-crud-app
    ```
    The app will be accessible at http://localhost:8000/docs
 
