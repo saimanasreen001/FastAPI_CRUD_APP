@@ -16,6 +16,14 @@ and a **virtual environment**. It allows you to manage a collection of student r
 - [Uvicorn](https://www.uvicorn.org/) (ASGI server)
 - [Pydantic](https://docs.pydantic.dev/) (data validation)
 
+## 📁 Project Structure:
+
+|--FastAPI_CRUD_APP/<br>
+  ├── main.py<br>
+  ├── requirements.txt<br>
+  ├── venv/<br>
+  └── README.md<br>
+
 ## 🛠️ Setup Instructions:
 1. **Clone the repository**  
    ```bash
@@ -50,13 +58,7 @@ and a **virtual environment**. It allows you to manage a collection of student r
    Open http://127.0.0.1:8000/docs for the Swagger UI.
    ```
 
-## 📁 Project Structure:
 
-|--FastAPI_CRUD_APP/<br>
-  ├── main.py<br>
-  ├── requirements.txt<br>
-  ├── venv/<br>
-  └── README.md<br>
 
 
 
