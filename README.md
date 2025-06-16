@@ -73,12 +73,13 @@ FastAPI_CRUD_APP/<br>
    
 
 3. **Pull the Docker image**
+   
    On any host machine with Docker installed:
    ```bash
    docker pull saimanasreen/fastapi-crud-app
    ```
 
-4. **Run the Docker Container**
+5. **Run the Docker Container**
    ```bash
    docker run -d -p 8000:8000 saimanasreen/fastapi-crud-app
    ```
