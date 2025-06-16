@@ -1,4 +1,4 @@
-## Exercise 2: Basic FastAPI CRUD APP
+## Exercise 2: Dockerized FastAPI CRUD APP
 This is a simple **FastAPI-based CRUD (Create, Read, Update, Delete)** application built using **Python**
 and a **virtual environment**. It allows you to manage a collection of student records via RESTful API endpoints.
 
