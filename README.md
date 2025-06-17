@@ -63,8 +63,8 @@ FastAPI_CRUD_APP/<br>
 ## Dockerized Deployment
  1. **Setup**
  
-     Install Docker Desktop and sign up.<br>
-     Use the same username and password to sign in into hub.docker.com
+     - Install Docker Desktop and sign up.<br>
+     - Use the same username and password to sign in into hub.docker.com
 
 2. **Docker Image**
    
@@ -106,7 +106,7 @@ FastAPI_CRUD_APP/<br>
    
    **API Documentation**
    
-   Once running (locally or via Docker), access the auto-generated Swagger UI:<br>
+   - Once running (locally or via Docker), access the auto-generated Swagger UI:<br>
    http://localhost:8000/docs
    
   
