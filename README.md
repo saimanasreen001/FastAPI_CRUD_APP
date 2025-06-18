@@ -52,7 +52,7 @@ FastAPI_CRUD_APP/<br>
 
 4. **Install dependencies**
     ```bash
-    pip install fastapi uvicorn pydantic
+    pip install fastapi uvicorn pydantic "python-jose[cryptography]" passlib[bcrypt] python-dotenv
     pip install -r requirements.txt
     ```
 5. **Add the dependencies to the requirements.txt file**
