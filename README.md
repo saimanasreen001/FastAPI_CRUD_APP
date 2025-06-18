@@ -78,11 +78,9 @@ FastAPI_CRUD_APP/<br>
    - **Authorize:**
      1. Click the "Authorize" button (lock icon) at the top right.
      2. In the popup, enter:
-        ```
         - username: `admin`
         - password: `admin123`
         - Leave client_id and client_secret blank
-        ```
      3. Click "Authorize" and then "Close".
    - **Access Protected Endpoints:**
      - Now you can use the student endpoints (create, read, update, delete) by clicking "Try it out" and "Execute". The token will be sent automatically.
